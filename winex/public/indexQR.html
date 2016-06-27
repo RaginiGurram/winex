@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+ 
+  <title>WineX </title>
+  <script type="text/javascript" src="js/winedata.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!---Added for QR code------------->
+  <link href="css/stylespopup.css" rel="stylesheet" type="text/css" media="all" />
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Custom styles for this template -->
+
+      <link href="css/carousel.css" rel="stylesheet">
+    </head>
+<!-- NAVBAR
+  ================================================== -->
+  <body >
+      <div class="container center-block ceterview" style="padding-top: 20px;">
+      <div  id="myCarousel"  class="container carousel container center-block">
+    <!-- Carousel
+    ================================================== -->
+    <div  id="myCarouselI" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselI" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselI" data-slide-to="1"></li>
+        <li data-target="#myCarouselI" data-slide-to="2"></li>
+          <li data-target="#myCarouselI" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/rot1.jpg" alt="First slide" class="img-responsive">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p></p>
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/rot2.jpg"  alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p></p>
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/rot3.jpg"  alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p></p>
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+
+       
+          <!--
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="5 slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Food Pairing</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+
+             <div class="item">
+          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="6 slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Fine Wines</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <a class="left carousel-control" href="#myCarouselI" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarouselI" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+  </div>
+
+            <div id="welcometext">  <h1 class="featurette-heading" style="color:white;padding-left:384px;margin-top: 100px" >Welcome to WineX <span class="text-muted"></span></h1><p style="color:white;padding-left:500px">Select the wine category</p></div>
+              
+              <p><a class="btn btn-lg btn-primary hidden" href="#" role="button">Browse gallery</a></p>
+
+  <div class="container" id="div_select">
+   <br/>
+      <div id="btn_back1" class="btn btn_back"><span class="glyphicon glyphicon-chevron-left"></span></div>
+  <!-- <button type="button" class="btn btn-primary btn-lg glyphicon-chevron-left btn-big" id="btn_back1">Back</button>-->
+   <!-- Three columns of text below the carousel -->
+   <br/>
+     <h1 id="cat_name"></h1>
+     <br/>
+   <div class="container foodView" id="div_food">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-primary btn-lg btn-block btn-food btn-default" id="btn_f1" >Fish</button>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-xs-3">
+       <button type="button" class="btn  btn-lg btn-block btn-food  btn-danger" id="btn_f2" >Lamb</button>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-xs-3">
+       <button type="button" class="btn btn-primary btn-lg btn-block btn-food  btn-info" id="btn_f3" >Chicken</button>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-xs-3">
+       <button type="button" class="btn btn-primary btn-lg btn-block btn-food btn-success" id="btn_f4" >Vegetables</button>
+     </div><!-- /.col-lg-4 -->
+
+   </div><!-- /.row -->
+ <br/>
+ </div>
+ <!--<hr class="featurette-divider">-->
+ <div class="container center-block">
+   <div class="row" id="detail_row">
+   <center> 
+    <div class="col-lg-4 w1 col-xs-4 wine_card">
+    <a id="wine_a_w1" class="wine_img"> <img id="wine_image_w1" class="img-responsive" alt="Generic placeholder image"> </a> 
+      <h2 id="wine_name_w1">Wine 1</h2>
+      <p id="wine_detail_w1" class="hidden-xs wd">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      <p><a class="btn btn-default hidden" href="#" role="button" id="btn_w1">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 w2 col-xs-4 wine_card">
+      <a id="wine_a_w2" class="wine_img">  <img id="wine_image_w2" class="img-responsive"  alt="Generic placeholder image"> </a>
+      <h2 id="wine_name_w2">Wine 2</h2>
+      <p id="wine_detail_w2"  class="hidden-xs wd">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <p><a class="btn btn-default hidden" href="#" role="button" id="btn_w2">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 w3 col-xs-4 wine_card">
+      <a id="wine_a_w3" class="wine_img" >  <img id="wine_image_w3" class="img-responsive"  alt="Generic placeholder image"> </a>
+      <h2 id="wine_name_w3">Wine 3</h2>
+      <p id="wine_detail_w3"  class="hidden-xs wd">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default hidden" href="#" role="button" id="btn_w3">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+   </center>
+  </div><!-- /.row -->
+</div>
+</div>
+<div id="div_details" >
+  <div class="container details">
+   <br/>
+       <div id="btn_back2" class="btn btn_back"><span class="glyphicon glyphicon-chevron-left"></span></div>
+  <!-- <button type="button" class="btn btn-primary btn-lg glyphicon-chevron-left btn-big" id="btn_back2">Back</button>-->
+   <br/>
+ 
+
+   <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+  </div>
+  
+
+</div>
+</div>
+    <!-- Marketing messaging and featurettes <hr class="featurette-divider">   <hr class="featurette-divider">
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+          </div>
+    <div class="container marketing" id="div_menu" style="margin-top: -20px">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4 col-xs-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_1" >Top Sellers</button>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 col-xs-4">
+         <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_2" >Fine Wines</button>
+       </div><!-- /.col-lg-4 -->
+       <div class="col-lg-4 col-xs-4">
+         <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_3" >New Wines</button>
+       </div><!-- /.col-lg-4 -->
+
+     </div><!-- /.row -->
+
+     <!-- Three columns of text below the carousel -->
+     <div class="row">
+      <div class="col-lg-4 col-xs-4">
+       <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_4" >Wines of the Week</button>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-lg-4 col-xs-4">
+       <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_6" >Food Pairing</button>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-lg-4 col-xs-4">
+       <button type="button" class="btn btn-primary btn-lg btn-block btn-big" id="btn_5" >Tesco Finest</button>
+     </div><!-- /.col-lg-4 -->
+
+   </div><!-- /.row -->
+ </div><!-- /.container -->
+ <!-- START THE FEATURETTES -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+        <link href="css/design_main.css" rel="stylesheet">
+    <script type="text/javascript">
+        var sel_w;
+        var cats = new Array();
+        var aurls = new Array();
+        function reset_led() {
+            $('#cdc').load(aurls[0]);
+            sel_w = "";
+        }
+        function show_wines(cat) {
+            var catName = $('#btn_' + cat).html();
+            $('#cat_name').html(catName);
+            sel_w = cats[cat - 1];
+            var wines = sel_w.split(',');
+            $('.w1').hide();
+            $('.w2').hide();
+            $('.w3').hide();
+            $('#cdc').load(aurls[cat]);
+            for (var i = 0; i < wines.length; i++) {
+                console.log(wines[i]); var idx = wines[i] - 1;
+                var ix = i + 1;
+                $('#wine_name_w' + ix).html(wineData[idx]["Wine Product"]);
+                $('#wine_detail_w' + ix).html(wineData[idx]["Tasting Notes"]);
+                $('#wine_image_w' + ix).attr('src', wineData[idx]["Image URL"]);
+                $('#wine_a_w' + ix).attr('href', aurls[cat] + wines[i]);
+                $('#wine_a_w' + ix).attr('target', 'cdc');
+                $('.w' + ix).show();
+
+            }
+            //$('#wine_name_w1').html(cat);
+
+
+        }
+        function show_wines_food(cat) {
+            var catName = $('#btn_' + cat).html();
+            $('#cat_name').html('Food Pairing - ' + catName);
+            // console.log(catName);
+            cat = cat.replace('f', '');
+            console.log(cat);
+            $('#div_select').show();
+            $('#detail_row').show();
+            //$('#wine_name_w1').html(cat);
+            sel_w = cats[cat - 1];
+            var wines = sel_w.split(',');
+            $('.w1').hide();
+            $('.w2').hide();
+            $('.w3').hide();
+            $('#cdc').load(aurls[cat]);
+            for (var i = 0; i < wines.length; i++) {
+                console.log(wines[i]); var idx = wines[i] - 1;
+                var ix = i + 1;
+                $('#wine_name_w' + ix).html(wineData[idx]["Wine Product"]);
+                $('#wine_detail_w' + ix).html(wineData[idx]["Tasting Notes"]);
+                $('#wine_image_w' + ix).attr('src', wineData[idx]["Image URL"]);
+                $('#wine_a_w' + ix).attr('href', aurls[cat] + wines[i]);
+                $('#wine_a_w' + ix).attr('target', 'cdc');
+                $('.w' + ix).show();
+
+            }
+        }
+        var server_id = location.hostname+':3001';
+        $(document).ready(function () {
+            $('body').on('click', function (e) {
+               if(e.target ==  e.currentTarget)
+                $('#cdc').load(aurls[0]);
+            });
+            cats.push('1,5');
+            cats.push('2,5,6');
+            cats.push('7');
+            cats.push('5,9');
+            cats.push('4,5');
+            aurls.push('http://' + server_id + '/clear');
+            aurls.push('http://' + server_id + '/topsellers/0');
+            aurls.push('http://' + server_id + '/finewines/0');
+            aurls.push('http://' + server_id + '/newwines/0');
+            aurls.push('http://' + server_id + '/winesofweek/0');
+            aurls.push('http://' + server_id + '/finest/0');
+            $('#div_details').hide();
+            $('#div_select').hide();
+            $('#div_food').hide();
+            $('.btn').on('click', function (e) {
+                $('.wine_pressed').removeClass('wine_pressed');
+                $('.btn').removeClass('btn_pressed');
+                $(this).addClass('btn_pressed');
+                $('#welcometext').hide();
+                if ($(this).attr('id') == 'btn_back1') {
+                    $('#myCarousel').show();
+                    $('#welcometext').show();
+                    //      $('#div_menu').hide();
+                    reset_led();
+                    $('#div_menu').show();
+                    $('#div_select').hide();
+                    $('#div_food').hide();
+
+                } else if ($(this).attr('id') == 'btn_back2') {
+
+                    $('#myCarousel').hide();
+                    $('#div_menu').show();
+                    $('#div_select').show();
+                    $('#div_details').hide();
+                } else {
+                    var btnid = $(this).attr('id').split('_')[1];
+                    switch (btnid) {
+                        case 'w1':
+                            $('#myCarousel').hide();
+                            $('#div_select').hide();
+                            $('#div_details').show();
+                            break;
+                        case '1':
+                            //  $('#cdc').load('http://192.168.3.73')
+                            //sel_w = "1,5";
+                        case '2':
+                            //  sel_w = "2,5,6";
+                        case '3':
+                            // sel_w = "7";
+                        case '4':
+                            //sel_w = "5,9"; 
+                        case '5':
+                            $('#detail_row').show();
+                            $('#div_food').hide();
+                            $('#myCarousel').hide();
+                            $('#div_select').show();
+                            $('#div_details').hide();
+                            show_wines(btnid);
+                            break;
+
+                        case '6':
+                            //  var catName = $('#btn_'+cat).html();
+                            $('#cat_name').html($(this).html());
+                            $('#myCarousel').hide();
+                            $('#detail_row').hide();
+                            $('#div_details').hide();
+                            $('#div_food').show();
+                            $('#div_select').show();
+                               $('#cdc').load(aurls[0]);
+                            break;
+                        case 'f1':
+                        case 'f2':
+                        case 'f3':
+                        case 'f4':
+                            $('#btn_6').addClass('btn_pressed');
+                            // $('#div_select').hide();
+                            show_wines_food(btnid);
+                            break;
+
+                    }
+                }
+
+
+
+            });
+
+
+        });
+
+</script>
+<!-- Added for the QR code ---->
+<script type="text/javascript" src="js/popup.js"></script>
+ <div id="toPopup"> 
+    	
+        <div class="close"></div>
+       	<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+		<div id="popup_content"> <!--your content start-->
+		   <p class="header"> Scan QRcode </p>
+		   <br/>
+		   <img id="qrcode"  class="displayed"/>
+		   <br/>
+		   <br/>
+        </div> <!--your content end-->
+    
+    </div> <!--toPopup end-->
+    
+	<div class="loader"></div>
+   	<div id="backgroundPopup"></div>
+<!-- Added for the QR code ---->
+<iframe id="cdc" name="cdc" style="height: 0px;width: 0px; z-index: -10;display: none;"></iframe>
+</body>
+</html>
